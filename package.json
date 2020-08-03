@@ -1,0 +1,11 @@
+{
+  "name": "TonyAndGuys",
+  "version": "1.0.0",
+  "description": "a simple landing page using gsap",
+  "main": "index.js",
+  "author": "Dipankar Nath",
+  "license": "MIT",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  }
+}

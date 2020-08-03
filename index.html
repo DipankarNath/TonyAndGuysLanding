@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tony and Guys</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <div class="wrapper">
+
+        <!-- =====OVERLAY===== -->
+        <div class="overlay first"></div>
+        <div class="overlay second"></div>
+        <div class="overlay third"></div>
+
+        <!-- =====NAVBAR===== -->
+        <nav class="navbar">
+            <div class="menu">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
+            <div class="lang">eng</div>
+            <div class="search">
+                <ion-icon name="search-outline"></ion-icon>
+            </div>
+        </nav>
+
+        <!-- =====SOCIAL MEDIA===== -->
+        <div class="media">
+            <ul>
+                <li>facebook</li>
+                <li>instagram</li>
+                <li>twitter</li>
+            </ul>
+        </div>
+
+        <!-- =====TEXT===== -->
+        <div class="text">
+            <h1>
+                <span class="hidetext">tony&guys</span>
+            </h1>
+            <h2>duality</h2>
+            <h3>
+                <span class="hidetext">
+                    collection 2017 <br> duality
+                </span>
+            </h3>
+            <p>
+                <span class="hidetext">
+                    Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.
+                </span>
+            </p>
+        </div>
+
+        <!-- =====SPONSOR===== -->
+        <div class="sponsor">
+            <img src="./assets/sponsor-logo.png" alt="sponsor-logo">
+            <p>official sponsor</p>
+        </div>
+
+        <!-- =====DISTORTION===== -->
+        <div class="distortion"></div>
+
+    </div>
+
+    <!-- ICON -->
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+    <!-- three js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js"
+    integrity="sha256-3mBEX8I0uMLF7+AUjJeTCelosuorzYpqwBMBPDTyQqY=" crossorigin="anonymous"></script>
+    <!-- hover-effect -->
+    <script src="./scripts/hover-effect.umd.js"></script>
+
+
+    <script>
+        new hoverEffect({
+            parent: document.querySelector('.distortion'),
+            intensity: 0.2,
+            image1: './assets/01.png',
+            image2: './assets/02.png',
+            displacementImage: './assets/diss.png',
+            imagesRatio: 380 / 300
+        });
+
+        // NAVBAR
+        gsap.from(".navbar div", {
+            delay: 1.5,
+            stagger: 0.08,
+            opacity: 0,
+            y: "20",
+            ease: "expo.inOut",
+        });
+
+        // MEDIA
+        gsap.from("ul li", {
+            delay: 1.5,
+            stagger: 0.08,
+            opacity: 0,
+            x: "-20",
+            ease: "expo.inOut",
+        });
+
+        // TEXT
+        gsap.from(".text h1 .hidetext", {
+            delay: 1,
+            y: "100%",
+            ease: "expo.inOut",
+        });
+
+        gsap.from(".text h3 .hidetext", {
+            delay: 1.1,
+            y: "100%",
+            ease: "expo.inOut",
+        });
+
+        gsap.from(".text p .hidetext", {
+            delay: 1.2,
+            y: "100%",
+            ease: "expo.inOut",
+        });
+
+        gsap.from(".text h2", {
+            delay: 1.5,
+            opacity: 0,
+            x: "-10000",
+            ease: "expo.inOut",
+        });
+
+        // SPONSOR
+        gsap.from(".sponsor img", {
+            delay: 1.5,
+            opacity: 0,
+            y: "20",
+            ease: "expo.inOut",
+        });
+
+        gsap.from(".sponsor p", {
+            delay: 1.6,
+            opacity: 0,
+            y: "20",
+            ease: "expo.inOut",
+        });
+
+        // DISTORTION
+        gsap.from(".distortion", {
+            delay: 2,
+            opacity: 0,
+            y: "20",
+            ease: "expo.inOut",
+        });
+
+        // OVERLAY
+        gsap.to(".first", {
+            delay: .5,
+            top: "-100%",
+            ease: "expo.inOut",
+        });
+
+        gsap.to(".second", {
+            delay: .7,
+            top: "-100%",
+            ease: "expo.inOut",
+        });
+
+        gsap.to(".third", {
+            delay: .9,
+            top: "-100%",
+            ease: "expo.inOut",
+        });
+
+    </script>
+    
+</body>
+</html>
